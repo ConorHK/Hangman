@@ -4,7 +4,8 @@
  * Created Date: Saturday April 20th 2019 8:21:19 pm
  * Author: ConorHK
  * -----
- * Description:
+ * Description: header file for board.cpp file.
  */
 
-void printBoard(int);
+//function prototype.
+void printBoard(int); //mistakes inputted, no outputs.

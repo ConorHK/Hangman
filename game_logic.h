@@ -4,14 +4,15 @@
  * Created Date: Saturday April 20th 2019 8:23:56 pm
  * Author: ConorHK
  * -----
- * Description:
+ * Description: header file for game_logic.cpp file.
  */
 
 #include <string>
-int initializeWord();
 
-int wordGuess(int, std::string);
+//function prototypes.
+int initializeWord();             //no inputs, difficulty outputted.
+void wordGuess(int, std::string); //difficulty and word to be guessed inputted. No outputs.
 
-std::string randomWordPick();
+std::string randomWordPick(); //no inputs, word to be guessed outputted.
 
-void invalidChoices(char);
+void invalidChoices(char); //incorrect guessed inputted, no outputs.
