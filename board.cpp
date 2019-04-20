@@ -13,7 +13,9 @@ using namespace std;
 
 void printBoard(int mistakes){
 
-    cout  << "HANGMAN" << endl;
+    if(mistakes == 0){
+        cout  << "HANGMAN" << endl;
+    }
     cout << "___________________" <<  endl;
     cout << "|                  |" << endl;
     

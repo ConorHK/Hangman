@@ -8,8 +8,17 @@
  */
 
 #include "board.h"
+#include "game_logic.h"
+#include <string>
+#include <iostream>
+using namespace std;
 
 int main(void){
-    int mistake = 7;
-    printBoard(mistake);
+    int difficulty;
+    string word;
+    difficulty = initializeWord();
+    
+    word = randomWordPick();
+    cout << word << endl;
+    wordGuess(difficulty, word);
 }
