@@ -20,6 +20,8 @@ using namespace std;
 #define HARD 3
 
 string wordlist[10];
+char wrongList[6];
+int increment = 0;
 
 int initializeWord(){
     int difficulty, increment = 0;
@@ -85,7 +87,7 @@ int wordGuess(int difficulty, string randomWord){
                     spaces[i] = '_';
                 }
 
-                while(!win || !lose){
+                while(!win && !lose){
                     for(size_t i = 0; i < 5; i++){
                         cout << " " << spaces[i];
                     }
@@ -106,6 +108,7 @@ int wordGuess(int difficulty, string randomWord){
                             cout << "Wrong! " << mistakes << " mistakes." << endl;
                         }
                         printBoard(mistakes);
+                        invalidChoices(guess);
                         if(mistakes == 6){
                             cout << endl << "He died." << endl;
                             lose = true;
@@ -127,4 +130,16 @@ string randomWordPick(){
     srand(time(NULL));
     int random = rand() % 10;
     return wordlist[random];
+}
+
+void invalidChoices(char wrong){
+    wrongList[increment] = wrong;
+    increment++;
+    
+    cout << "Invalid choices: "; 
+    for(int i = 0; i <= increment; i++){
+        cout << wrongList[i] << " ";
+    }
+    cout << endl;
+
 }

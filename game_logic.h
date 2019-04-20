@@ -13,3 +13,5 @@ int initializeWord();
 int wordGuess(int, std::string);
 
 std::string randomWordPick();
+
+void invalidChoices(char);
