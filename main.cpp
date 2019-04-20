@@ -23,7 +23,6 @@ int main(void)
     difficulty = initializeWord(); //stores whether user has picked easy, medium, or hard.
     word = randomWordPick();       //stores the word to be guessed.
 
-    cout << "word: " << word << endl;
     //function that plays game.
     wordGuess(difficulty, word);
 }
