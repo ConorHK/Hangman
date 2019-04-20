@@ -7,4 +7,9 @@
  * Description:
  */
 
-void initializeWord();
+#include <string>
+int initializeWord();
+
+int wordGuess(int, std::string);
+
+std::string randomWordPick();
